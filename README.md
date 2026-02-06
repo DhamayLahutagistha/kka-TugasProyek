@@ -37,7 +37,37 @@ Kegiatan ini membantu saya memahami bahwa **data tidak hanya angka**, tetapi jug
 Visualisasi dan AI membuat proses analisis data menjadi lebih mudah, menarik, dan efisien.
 
 
-📑 Laporan Praktikum OOP & Proyek Integrasi "TechMaster"Repositori ini mendokumentasikan perjalanan pembelajaran Pemrograman Berorientasi Objek (OOP) melalui 6 modul latihan dan satu proyek tantangan integrasi.🚀 Analisis Praktikum (Latihan 1 - 6)⚔️ Logika Pertarungan & InteraksiPada tahap awal, kita berhasil mengimplementasikan interaksi antar objek. Penggunaan super() pada class Mage memungkinkan pewarisan atribut dari class Hero sambil menambahkan fitur unik seperti Mana.Output Program:Plaintext--- Pertarungan Dimulai ---
+# 📑 Laporan Praktikum OOP & Proyek "TechMaster"
+
+Repositori ini berisi dokumentasi lengkap pengerjaan tugas praktikum 1-6 serta penyelesaian Proyek Integrasi Sistem Manajemen Inventaris Elektronik menggunakan bahasa pemrograman Python.
+
+---
+
+## 📋 Analisis Praktikum (Latihan 1-6)
+
+### 1. Implementasi Pilar OOP
+* **Abstraction**: Menggunakan abstract class `GameUnit` dan `BarangElektronik` sebagai kontrak dasar agar setiap objek memiliki standar metode yang sama.
+* **Encapsulation**: Melindungi data sensitif seperti `__hp`, `__stok`, dan `__harga_dasar` menggunakan *Private Attribute* agar tidak bisa dimodifikasi secara ilegal dari luar class.
+* **Inheritance**: Class anak (seperti `Mage`, `Laptop`, atau `Smartphone`) mewarisi sifat dasar dari parent class untuk meningkatkan efisiensi dan pengorganisasian kode.
+* **Polymorphism**: Memungkinkan objek yang berbeda untuk merespons perintah yang sama (seperti `.serang()` atau `.hitung_harga_total()`) dengan cara yang berbeda-beda sesuai karakteristiknya.
+
+### 2. Jawaban Tugas Analisis 6 (Polymorphism)
+* **Uji Skalabilitas (Class Healer)**:
+  * **Pertanyaan**: Apakah program berjalan lancar setelah menambah class `Healer`?
+  * **Jawaban**: **Ya, berjalan lancar.** Objek `Healer` dapat langsung masuk ke dalam list `pasukan` tanpa mengubah kode perulangan `for` sedikit pun.
+  * **Kesimpulan**: Keuntungan Polimorfisme adalah kemudahan dalam mengupdate konten (seperti karakter baru) secara cepat tanpa merusak struktur kode inti yang sudah stabil.
+* **Konsistensi Penamaan**:
+  * **Pertanyaan**: Apa yang terjadi jika nama metode diubah menjadi `tembak_panah`?
+  * **Jawaban**: Program akan mengalami **Error (AttributeError)** karena fungsi pemanggil tidak menemukan metode `.serang()` pada objek tersebut.
+  * **Kesimpulan**: Nama metode harus persis sama karena Polimorfisme bekerja berdasarkan "kontrak" antarmuka yang seragam agar satu perintah bisa dijalankan oleh berbagai jenis objek.
+
+---
+
+## 🖥️ Logika & Output Program
+
+### A. Output Pertarungan (Latihan 1-6)
+```text
+--- Pertarungan Dimulai ---
 Layla menyerang Zilong!
 Zilong terkena damage 15. Sisa HP: 105
 Zilong menyerang Layla!
@@ -45,9 +75,20 @@ Layla terkena damage 20. Sisa HP: 80
 
 --- Update Class Hero (Mage) ---
 Eudora [Mage] | HP: 80 | Mana: 100
+Eudora menyerang Balmond!
+Balmond terkena damage 30. Sisa HP: 170
 Eudora menggunakan Fireball ke Balmond!
 Balmond terkena damage 60. Sisa HP: 110
-🛡️ Keamanan Data (Encapsulation)Implementasi Private Attribute (__hp) menjamin integritas data. HP tidak bisa dimanipulasi secara ilegal dari luar class. Jika input tidak valid (negatif atau terlalu besar), Setter akan melakukan koreksi otomatis.🎭 Analisis Mendalam: Polimorfisme (Latihan 6)Berikut adalah jawaban atas pertanyaan analisis pada Modul 6:1. Uji Skalabilitas (Penambahan Class Healer)Pertanyaan: Apakah program berjalan lancar?Jawaban: Ya, program berjalan sangat lancar. Meskipun kita menambahkan objek dari class baru (Healer) ke dalam list pasukan, kode perulangan for pahlawan in pasukan: tetap bisa mengeksekusi method .serang() tanpa perlu dimodifikasi sedikit pun.Kesimpulan: Keuntungan Polimorfisme bagi programmer adalah fleksibilitas dan skalabilitas. Kita bisa menambah konten baru (karakter, item, atau fitur) ke dalam game tanpa harus membongkar kode lama yang sudah stabil. Kode menjadi lebih bersih dan mudah dikembangkan.2. Konsistensi Penamaan (Method Archer)Pertanyaan: Apa yang terjadi jika method serang diubah menjadi tembak_panah?Jawaban: Program akan mengalami Error (AttributeError). Saat perulangan memanggil pahlawan.serang(), Python tidak menemukan method tersebut pada objek Archer karena namanya telah berubah.Alasan Konsistensi Penamaan: Dalam Polimorfisme, nama method bertindak sebagai "Kontrak". Agar berbagai objek berbeda dapat diperlakukan dengan cara yang sama dalam satu perintah (interfase tunggal), nama method-nya harus persis sama. Jika berbeda, fungsi pemanggil tidak akan mengenali perintah tersebut.🛠️ Proyek Integrasi: "TechMaster"Proyek ini menggabungkan keempat pilar OOP ke dalam sistem manajemen stok toko elektronik.1. Implementasi Pilar OOPPilarImplementasi dalam ProyekAbstractionMenggunakan BarangElektronik sebagai kelas abstrak agar tidak bisa dibuat objek barang "umum".EncapsulationMenyembunyikan stok dan harga dasar menggunakan __.InheritanceLaptop dan Smartphone mewarisi properti dasar dari parent class.PolymorphismMethod hitung_harga_total memberikan hasil berbeda sesuai jenis pajak barang.2. Hasil Eksekusi Program (Struk Transaksi)Plaintext--- SETUP DATA ---
+
+--- PERANG DIMULAI (Polymorphism) ---
+Eudora (Mage)   : menembakkan Bola Api! Boom!
+Miya (Archer)   : memanah dari jauh! Jleb!
+Zilong (Fighter): memukul dengan pedang! Slash!
+Gord (Mage)     : menembakkan Bola Api! Boom!
+
+### Output Proyek Integrasi (TechMaster)
+
+--- SETUP DATA ---
 ✅ Berhasil menambahkan stok ROG Zephyrus: 10 unit.
 ❌ Gagal update stok iPhone 13! Stok tidak boleh negatif (-5).
 ✅ Berhasil menambahkan stok iPhone 13: 20 unit.
