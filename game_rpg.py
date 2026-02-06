@@ -1,24 +1,32 @@
 #LATIHAN 1 : Membuat Class Hero
 
-from unicodedata import name
-
-
 class Hero:
- # Constructor: Dijalankan saat Hero baru dibuat
+    # Constructor
     def __init__(self, name, hp, attack_power):
-        self.name = name # Nama Hero
-        self.hp = hp # Nyawa (Health Point)
-        self.attack_power = attack_power # Kekuatan Serangan
- # Method untuk menampilkan info hero
+        self.name = name 
+        self.hp = hp 
+        self.attack_power = attack_power 
+
+    # Method Info
     def info(self):
         print(f"Hero: {self.name} | HP: {self.hp} | Power: {self.attack_power}")
+
+    # PERBAIKAN: Masukkan method ini ke dalam class Hero (tambah indentasi)
+    def serang(self, lawan):
+        print(f"{self.name} menyerang {lawan.name}!")
+        lawan.diserang(self.attack_power)
+
+    def diserang(self, damage):
+        self.hp -= damage
+        print(f"{self.name} terkena damage {damage}. Sisa HP: {self.hp}")
+
 # -- Main Program --
-# Membuat Object (Instansiasi)
 hero1 = Hero("Layla", 100, 15)
 hero2 = Hero("Zilong", 120, 20)
-# Memanggil Method
-hero1.info()
-hero2.info()
+
+print("\n--- Pertarungan Dimulai ---")
+hero1.serang(hero2) # Sekarang ini tidak akan error lagi
+hero2.serang(hero1)
 
 #LATIHAN 2 : Interaksi Antar Objek (Method)
 

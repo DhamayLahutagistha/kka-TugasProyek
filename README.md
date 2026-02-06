@@ -37,107 +37,30 @@ Kegiatan ini membantu saya memahami bahwa **data tidak hanya angka**, tetapi jug
 Visualisasi dan AI membuat proses analisis data menjadi lebih mudah, menarik, dan efisien.
 
 
-# Sistem Manajemen Inventaris TechMaster & Laporan Praktikum
-Repositori ini berisi kumpulan tugas praktikum 1-6 dan Proyek Integrasi OOP.
-
-Tugas Analisis 6 :
---- Pertarungan Dimulai ---
+📑 Laporan Praktikum OOP & Proyek Integrasi "TechMaster"Repositori ini mendokumentasikan perjalanan pembelajaran Pemrograman Berorientasi Objek (OOP) melalui 6 modul latihan dan satu proyek tantangan integrasi.🚀 Analisis Praktikum (Latihan 1 - 6)⚔️ Logika Pertarungan & InteraksiPada tahap awal, kita berhasil mengimplementasikan interaksi antar objek. Penggunaan super() pada class Mage memungkinkan pewarisan atribut dari class Hero sambil menambahkan fitur unik seperti Mana.Output Program:Plaintext--- Pertarungan Dimulai ---
 Layla menyerang Zilong!
 Zilong terkena damage 15. Sisa HP: 105
 Zilong menyerang Layla!
 Layla terkena damage 20. Sisa HP: 80
 
---- Pertarungan Dimulai ---
-Layla menyerang Zilong!
-Zilong terkena damage 15. Sisa HP: 90
-Zilong menyerang Layla!
-Layla terkena damage 20. Sisa HP: 60
-
---- Update Class Hero ---
+--- Update Class Hero (Mage) ---
 Eudora [Mage] | HP: 80 | Mana: 100
-Eudora menyerang Balmond!
-Balmond terkena damage 30. Sisa HP: 170
-Balmond terkena damage 30. Sisa HP: 170
 Eudora menggunakan Fireball ke Balmond!
 Balmond terkena damage 60. Sisa HP: 110
-0
-Saya adalah Hero: Alucard
-Saya adalah Monster: Serigala
---- PERANG DIMULAI ---
-Eudora (Mage) menembakkan Bola Api! Boom!
-Miya (Archer) memanah dari jauh! Jleb!
-Zilong (Fighter) memukul dengan pedang! Slash!
-Gord (Mage) menembakkan Bola Api! Boom!
-PS D:\kka>
-
-Balmond terkena damage 30. Sisa HP: 170
-Eudora menggunakan Fireball ke Balmond!
-Balmond terkena damage 60. Sisa HP: 110
-0
-Saya adalah Hero: Alucard
-Saya adalah Monster: Serigala
---- PERANG DIMULAI ---
-Eudora (Mage) menembakkan Bola Api! Boom!
-Miya (Archer) memanah dari jauh! Jleb!
-Zilong (Fighter) memukul dengan pedang! Slash!
-Gord (Mage) menembakkan Bola Api! Boom!
-PS D:\kka>
-
-Balmond terkena damage 30. Sisa HP: 170
-Eudora menggunakan Fireball ke Balmond!
-Balmond terkena damage 60. Sisa HP: 110
-0
-Saya adalah Hero: Alucard
-Saya adalah Monster: Serigala
---- PERANG DIMULAI ---
-Eudora (Mage) menembakkan Bola Api! Boom!
-Miya (Archer) memanah dari jauh! Jleb!
-Zilong (Fighter) memukul dengan pedang! Slash!
-Gord (Mage) menembakkan Bola Api! Boom!
-Balmond terkena damage 30. Sisa HP: 170
-Eudora menggunakan Fireball ke Balmond!
-Balmond terkena damage 60. Sisa HP: 110
-0
-Saya adalah Hero: Alucard
-Saya adalah Monster: Serigala
---- PERANG DIMULAI ---
-Balmond terkena damage 30. Sisa HP: 170
-Eudora menggunakan Fireball ke Balmond!
-Balmond terkena damage 60. Sisa HP: 110
-0
-Saya adalah Hero: Alucard
-Balmond terkena damage 30. Sisa HP: 170
-Eudora menggunakan Fireball ke Balmond!
-Balmond terkena damage 60. Sisa HP: 110
-0
-Balmond terkena damage 30. Sisa HP: 170
-Eudora menggunakan Fireball ke Balmond!
-Balmond terkena damage 30. Sisa HP: 170
-Eudora menggunakan Fireball ke Balmond!
-Balmond terkena damage 60. Sisa HP: 110
-0
-0
-Saya adalah Hero: Alucard
-Saya adalah Monster: Serigala
---- PERANG DIMULAI ---
-Eudora (Mage) menembakkan Bola Api! Boom!
-Miya (Archer) memanah dari jauh! Jleb!
-Zilong (Fighter) memukul dengan pedang! Slash!
-Gord (Mage) menembakkan Bola Api! Boom!
-
-Tugas Proyek Integrasi (Challenge) :
---- SETUP DATA ---
-Berhasil menambahkan stok ROG Zephyrus: 10 unit.
-Gagal update stok iPhone 13! Stok tidak boleh negatif (-5).
-Berhasil menambahkan stok iPhone 13: 20 unit.
+🛡️ Keamanan Data (Encapsulation)Implementasi Private Attribute (__hp) menjamin integritas data. HP tidak bisa dimanipulasi secara ilegal dari luar class. Jika input tidak valid (negatif atau terlalu besar), Setter akan melakukan koreksi otomatis.🎭 Analisis Mendalam: Polimorfisme (Latihan 6)Berikut adalah jawaban atas pertanyaan analisis pada Modul 6:1. Uji Skalabilitas (Penambahan Class Healer)Pertanyaan: Apakah program berjalan lancar?Jawaban: Ya, program berjalan sangat lancar. Meskipun kita menambahkan objek dari class baru (Healer) ke dalam list pasukan, kode perulangan for pahlawan in pasukan: tetap bisa mengeksekusi method .serang() tanpa perlu dimodifikasi sedikit pun.Kesimpulan: Keuntungan Polimorfisme bagi programmer adalah fleksibilitas dan skalabilitas. Kita bisa menambah konten baru (karakter, item, atau fitur) ke dalam game tanpa harus membongkar kode lama yang sudah stabil. Kode menjadi lebih bersih dan mudah dikembangkan.2. Konsistensi Penamaan (Method Archer)Pertanyaan: Apa yang terjadi jika method serang diubah menjadi tembak_panah?Jawaban: Program akan mengalami Error (AttributeError). Saat perulangan memanggil pahlawan.serang(), Python tidak menemukan method tersebut pada objek Archer karena namanya telah berubah.Alasan Konsistensi Penamaan: Dalam Polimorfisme, nama method bertindak sebagai "Kontrak". Agar berbagai objek berbeda dapat diperlakukan dengan cara yang sama dalam satu perintah (interfase tunggal), nama method-nya harus persis sama. Jika berbeda, fungsi pemanggil tidak akan mengenali perintah tersebut.🛠️ Proyek Integrasi: "TechMaster"Proyek ini menggabungkan keempat pilar OOP ke dalam sistem manajemen stok toko elektronik.1. Implementasi Pilar OOPPilarImplementasi dalam ProyekAbstractionMenggunakan BarangElektronik sebagai kelas abstrak agar tidak bisa dibuat objek barang "umum".EncapsulationMenyembunyikan stok dan harga dasar menggunakan __.InheritanceLaptop dan Smartphone mewarisi properti dasar dari parent class.PolymorphismMethod hitung_harga_total memberikan hasil berbeda sesuai jenis pajak barang.2. Hasil Eksekusi Program (Struk Transaksi)Plaintext--- SETUP DATA ---
+✅ Berhasil menambahkan stok ROG Zephyrus: 10 unit.
+❌ Gagal update stok iPhone 13! Stok tidak boleh negatif (-5).
+✅ Berhasil menambahkan stok iPhone 13: 20 unit.
 
 --- STRUK TRANSAKSI ---
 1. [LAPTOP] ROG Zephyrus | Proc: Ryzen 9
-   Harga Dasar: Rp 20,000,000 | Pajak(10%): Rp 2,000,000
+   Harga Dasar: Rp 20,000,000 | Pajak (10%): Rp 2,000,000
    Beli: 2 unit | Subtotal: Rp 44,000,000
+
 2. [SMARTPHONE] iPhone 13 | Cam: 12MP
-   Harga Dasar: Rp 15,000,000 | Pajak(5%): Rp 750,000
+   Harga Dasar: Rp 15,000,000 | Pajak (5%): Rp 750,000
    Beli: 1 unit | Subtotal: Rp 15,750,000
-----------------------------------------
+
+-------------------------------------------------------
 TOTAL TAGIHAN: Rp 59,750,000
-----------------------------------------
+-------------------------------------------------------
